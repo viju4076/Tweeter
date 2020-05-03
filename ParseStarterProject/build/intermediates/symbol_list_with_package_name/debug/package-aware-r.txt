@@ -803,6 +803,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button
 id buttonPanel
 id center_vertical
 id chains
@@ -837,6 +838,7 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
@@ -846,6 +848,7 @@ id line1
 id line3
 id listMode
 id list_item
+id loginOrSign
 id message
 id middle
 id multiply
@@ -860,6 +863,7 @@ id on
 id packed
 id parent
 id parentPanel
+id password
 id percent
 id progress_circular
 id progress_horizontal
@@ -922,6 +926,7 @@ id unchecked
 id uniform
 id up
 id useLogo
+id username
 id wide
 id withText
 id wrap
@@ -980,6 +985,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
+mipmap twitter
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

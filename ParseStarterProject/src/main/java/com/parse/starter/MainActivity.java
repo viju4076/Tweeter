@@ -11,7 +11,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,16 +26,93 @@ import com.parse.ParseAnonymousUtils;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.parse.SignUpCallback;
 
 
 public class MainActivity extends AppCompatActivity {
+EditText username,password;
+TextView loginOrSign;
+boolean login=true;
+Button go;
+public void change(View view)
+{
+  if(login)
+  {
+    login = false;
+    loginOrSign.setText("Or LogIn");
+    go.setText("SignUp");
 
+  }
+else
+  {
+    login = true;
+    loginOrSign.setText("Or SignUp");
+    go.setText("LogIn");
+  }
+
+}
+public void login(View view)
+{
+  String user=username.getText().toString();
+  String pass=password.getText().toString();
+  if(user.equals("")||pass.equals(""))
+  {
+    Toast.makeText(getApplicationContext(),"Fields cannot be left blank",Toast.LENGTH_SHORT).show();
+    return;
+  }
+  if(login)
+  {
+    ParseUser.logInInBackground(user, pass, new LogInCallback() {
+      @Override
+      public void done(ParseUser user, ParseException e) {
+       if(e==null)
+       {
+         Log.i("User "," Login Successful");
+       }
+       else
+       {
+         Toast.makeText(getApplicationContext(),"Invalid username/password",Toast.LENGTH_SHORT).show();
+       }
+
+      }
+    });
+
+
+  }
+  else
+  {
+    ParseUser parseUser=new ParseUser();
+    parseUser.setUsername(user);
+    parseUser.setPassword(pass);
+    parseUser.signUpInBackground(new SignUpCallback() {
+      @Override
+      public void done(ParseException e) {
+        if(e==null)
+        {
+          Toast.makeText(getApplicationContext(),"Signup Successful",Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+          Toast.makeText(getApplicationContext(),"Signup Failed",Toast.LENGTH_SHORT).show();
+
+        }
+      }
+    });
+
+  }
+
+
+
+}
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
+username=findViewById(R.id.username);
+password=findViewById(R.id.password);
+loginOrSign=findViewById(R.id.loginOrSign);
+go=findViewById(R.id.button);
     
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }

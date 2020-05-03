@@ -35,7 +35,7 @@ public class StarterApplication extends Application {
             .server("http://ec2-18-216-7-7.us-east-2.compute.amazonaws.com//parse/")
             .build()
     );
-
+/*
     ParseObject object = new ParseObject("ExampleObject");
     object.put("myNumber", "123");
     object.put("myString", "rob");
@@ -51,8 +51,8 @@ public class StarterApplication extends Application {
       }
     });
 
-
-    ParseUser.enableAutomaticUser();
+*/
+  //  ParseUser.enableAutomaticUser();
 
     ParseACL defaultACL = new ParseACL();
     defaultACL.setPublicReadAccess(true);
