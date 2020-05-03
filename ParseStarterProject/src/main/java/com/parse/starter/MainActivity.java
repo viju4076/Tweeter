@@ -28,6 +28,8 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 EditText username,password;
@@ -90,6 +92,8 @@ public void login(View view)
     ParseUser parseUser=new ParseUser();
     parseUser.setUsername(user);
     parseUser.setPassword(pass);
+parseUser.put("following",new ArrayList<String>());
+
     parseUser.signUpInBackground(new SignUpCallback() {
       @Override
       public void done(ParseException e) {
@@ -119,8 +123,19 @@ username=findViewById(R.id.username);
 password=findViewById(R.id.password);
 loginOrSign=findViewById(R.id.loginOrSign);
 go=findViewById(R.id.button);
-ParseUser.logOut();
-getSupportActionBar().setTitle("Twitter Login");
+//ParseUser.logOut();
+    getSupportActionBar().setTitle("Twitter Login");
+
+    if(ParseUser.getCurrentUser()!=null)
+    {
+      Intent intent=new Intent(MainActivity.this,userlist.class);
+      intent.putExtra("username",ParseUser.getCurrentUser().getUsername());
+      finish();
+      startActivity(intent);
+
+
+    }
+
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }

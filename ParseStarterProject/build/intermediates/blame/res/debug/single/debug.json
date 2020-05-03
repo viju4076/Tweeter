@@ -4,6 +4,10 @@
         "source": "C:\\tweeter\\Parse-Server-Starter-Project\\ParseStarterProject\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\tweeter\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\menu_user_menu.xml.flat",
+        "source": "C:\\tweeter\\Parse-Server-Starter-Project\\ParseStarterProject\\src\\main\\res\\menu\\user_menu.xml"
+    },
+    {
         "merged": "C:\\tweeter\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_twitter.jpg.flat",
         "source": "C:\\tweeter\\Parse-Server-Starter-Project\\ParseStarterProject\\src\\main\\res\\mipmap-hdpi\\twitter.jpg"
     },
