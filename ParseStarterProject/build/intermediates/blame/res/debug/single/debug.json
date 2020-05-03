@@ -22,5 +22,9 @@
     {
         "merged": "C:\\tweeter\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\tweeter\\Parse-Server-Starter-Project\\ParseStarterProject\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\tweeter\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout_activity_userlist.xml.flat",
+        "source": "C:\\tweeter\\Parse-Server-Starter-Project\\ParseStarterProject\\src\\main\\res\\layout\\activity_userlist.xml"
     }
 ]

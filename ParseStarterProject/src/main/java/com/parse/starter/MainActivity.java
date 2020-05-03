@@ -67,7 +67,13 @@ public void login(View view)
       public void done(ParseUser user, ParseException e) {
        if(e==null)
        {
+         Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT).show();
          Log.i("User "," Login Successful");
+         Intent intent=new Intent(MainActivity.this,userlist.class);
+         intent.putExtra("username",ParseUser.getCurrentUser().getUsername());
+         startActivity(intent);
+         finish();
+
        }
        else
        {
@@ -113,7 +119,9 @@ username=findViewById(R.id.username);
 password=findViewById(R.id.password);
 loginOrSign=findViewById(R.id.loginOrSign);
 go=findViewById(R.id.button);
-    
+ParseUser.logOut();
+getSupportActionBar().setTitle("Twitter Login");
+
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }
 
