@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-30:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\edb03ed300512ae8da7c146a103a6c79\jetified-play-services-maps-17.0.0\AndroidManifest.xml:17:1-38:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
@@ -29,25 +29,25 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vijay\.gradle\ca
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\54ec9a60a0f20829d9c5323f1ce0908c\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\0571339fd4cb74441b19561f6766bb98\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml
 		INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml
-		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml
-		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:5:5-22:19
+ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:5:5-23:19
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\edb03ed300512ae8da7c146a103a6c79\jetified-play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\edb03ed300512ae8da7c146a103a6c79\jetified-play-services-maps-17.0.0\AndroidManifest.xml:30:5-36:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -76,32 +76,30 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vi
 		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:11:9-44
 	android:name
 		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:6:9-43
-activity#com.parse.starter.userlist
+activity#com.parse.starter.UserFeed
 ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:12:9-55
 	android:name
 		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:12:19-43
+activity#com.parse.starter.userlist
+ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:13:9-46
+	android:name
+		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:13:19-43
 activity#com.parse.starter.MainActivity
-ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:13:9-21:20
+ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:14:9-22:20
 	android:label
-		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:15:13-45
+		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:16:13-45
 	android:name
-		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:14:13-41
+		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:15:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:17:17-69
+ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:17:25-66
+		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:19:17-77
+ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:19:27-74
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\edb03ed300512ae8da7c146a103a6c79\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\edb03ed300512ae8da7c146a103a6c79\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
-	android:name
-		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:23:22-76
+		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:20:27-74
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:24:5-80
 	android:name
@@ -111,11 +109,17 @@ ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\
 	android:name
 		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:25:22-76
 uses-permission#android.permission.INTERNET
-ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:27:5-67
+ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\edb03ed300512ae8da7c146a103a6c79\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\edb03ed300512ae8da7c146a103a6c79\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:27:22-64
+		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:26:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:28:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\edb03ed300512ae8da7c146a103a6c79\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\vijay\.gradle\caches\transforms-2\files-2.1\edb03ed300512ae8da7c146a103a6c79\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:28:22-76
 uses-sdk
 INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\tweeter\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml

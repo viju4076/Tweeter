@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.util.Log;
 import android.util.SparseBooleanArray;
+import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
@@ -20,6 +22,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GestureDetectorCompat;
+import androidx.core.view.MotionEventCompat;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -47,40 +51,37 @@ public class userlist extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
-        SparseBooleanArray items=list.getCheckedItemPositions();
-        ArrayList<String> following =new ArrayList<String>();
-        for(int i=0;i<items.size();i++)
-        {
-            if(items.get(i))
-            {
-                Log.i("user",user.get(i));
-                following.add(user.get(i));
-            }
-        }
-        ParseUser.getCurrentUser().put("following",following);
-        ParseUser.getCurrentUser().saveInBackground(new SaveCallback() {
-            @Override
-            public void done(ParseException e) {
-                if(e==null)
-                {
-                    Toast.makeText(getApplicationContext(),"Following changed",Toast.LENGTH_SHORT);
-                    if(item.getItemId()==R.id.logout)
-                    {
-                        ParseUser.logOut();
-                        Intent intent=new Intent(userlist.this,MainActivity.class);
-                        intent.putExtra("logout",true);
-                        finish();
-                        startActivity(intent);
-
-                    }
-
-
-
+        if(item.getItemId()!=R.id.refresh) {
+            SparseBooleanArray items = list.getCheckedItemPositions();
+            ArrayList<String> following = new ArrayList<String>();
+            for (int i = 0; i < items.size(); i++) {
+                if (items.get(i)) {
+                    Log.i("user", user.get(i));
+                    following.add(user.get(i));
                 }
             }
-        });
+            ParseUser.getCurrentUser().put("following", following);
+            Log.i("hello", following.size() + "");
+            ParseUser.getCurrentUser().saveInBackground(new SaveCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if (e == null) {
+                        Toast.makeText(getApplicationContext(), "Following changed", Toast.LENGTH_SHORT);
+                        if (item.getItemId() == R.id.logout) {
+                            ParseUser.logOut();
+                            Intent intent = new Intent(userlist.this, MainActivity.class);
+                            intent.putExtra("logout", true);
+                            finish();
+                            startActivity(intent);
+
+                        }
 
 
+                    }
+                }
+            });
+
+        }
 
         if(item.getItemId()==R.id.tweet)
         {
@@ -134,16 +135,82 @@ public class userlist extends AppCompatActivity {
         }
         else if(item.getItemId()==R.id.userFeed)
         {
+            Intent intent=new Intent(getApplicationContext(),UserFeed.class);
+            intent.putExtra("username",ParseUser.getCurrentUser().getUsername());
+
+            startActivity(intent);
+
+
+
+
+        }
+        else if(item.getItemId()==R.id.refresh)
+        {
+
+updateUser();
         }
         else
         {
 
-
-
         }
         return super.onOptionsItemSelected(item);
     }
+public void updateUser()
+{
+    SparseBooleanArray items = list.getCheckedItemPositions();
+    ArrayList<String> following = new ArrayList<String>();
+    Log.i("list",items.size()+"");
+    for (int i = 0; i < items.size(); i++) {
+        if (items.get(i)) {
+            Log.i("user", user.get(i));
+            following.add(user.get(i));
+        }
+    }
+    ParseUser.getCurrentUser().put("following", following);
+ParseUser.getCurrentUser().saveInBackground();
+    ParseQuery<ParseUser> query=ParseUser.getQuery();
+    query.whereNotEqualTo("username",username);
+    query.addAscendingOrder("username");
+    user=new ArrayList<String>();
+    arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.select_dialog_multichoice,user);
 
+    query.findInBackground(new FindCallback<ParseUser>() {
+        @Override
+        public void done(List<ParseUser> objects, ParseException e) {
+            if(e==null)
+            {
+                if(objects.size()>0)
+                {
+                    for(ParseObject object:objects)
+                    {
+                        user.add((String)object.get("username"));
+                 Log.i("name",(String)object.get("username"));
+                    }
+                    list.setAdapter(arrayAdapter);
+
+                    ArrayList<String> following=(ArrayList<String>)ParseUser.getCurrentUser().get("following");
+                    Log.i("following",following.size()+"");
+                    for(int i=0;i<following.size();i++)
+                    {
+                        for(int j=0;j<user.size();j++)
+                        {
+
+                            if(following.get(i).equals(user.get(j)))
+                            {
+                                list.setItemChecked(j,true);
+                            }
+                        }
+                    }
+                     arrayAdapter.notifyDataSetChanged();
+
+
+                    }
+            }
+        }
+    });
+
+
+}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -151,12 +218,12 @@ public class userlist extends AppCompatActivity {
         getSupportActionBar().setTitle("User List");
         Intent intent=getIntent();
        username =intent.getStringExtra("username") ;
-      user=new ArrayList<String>();
-      list=findViewById(R.id.list);
-      arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.select_dialog_multichoice,user);
-      list.setAdapter(arrayAdapter);
-      list.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
-     Log.i("username",username);
+        user=new ArrayList<String>();
+        list=findViewById(R.id.list);
+        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.select_dialog_multichoice,user);
+        list.setAdapter(arrayAdapter);
+        list.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
+        Log.i("username",username);
         ParseQuery<ParseUser> query=ParseUser.getQuery();
         query.whereNotEqualTo("username",username);
         query.addAscendingOrder("username");
@@ -173,6 +240,7 @@ public class userlist extends AppCompatActivity {
 
                         }
                         ArrayList<String> following=(ArrayList<String>)ParseUser.getCurrentUser().get("following");
+                        Log.i("following",following.size()+"");
                         for(int i=0;i<following.size();i++)
                         {
                             for(int j=0;j<user.size();j++)
@@ -192,7 +260,14 @@ public class userlist extends AppCompatActivity {
             }
         });
 
+
+
+
+
+
     }
+
+
 
 
 

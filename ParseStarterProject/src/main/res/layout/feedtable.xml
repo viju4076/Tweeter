@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Tweet"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/Author"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:fontFamily="cursive"
+        android:gravity="left"
+        android:paddingLeft="15dp"
+        android:text="TextView"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp" />
+</LinearLayout>
